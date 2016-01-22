@@ -21,7 +21,7 @@ To achieve this, we created a set of equations in our main JavaScript file to ha
 
 **Vector Operations** 
 
-```language(javascript)
+{% highlight js %}
 ////////////////////////////////
 /////VECTOR OPERATIONS//////////
 ////////////////////////////////
@@ -40,12 +40,12 @@ function addVectors (vec1, vec2) {
 function multVector (vec1, multiplier) {
   return [vec1[X] * multiplier, vec1[Y] * multiplier];
 }
-```
+{% endhighlight %}
 Vectors are useful when you are working with something that has both magnitude and direction.  When we are calculating the velocity, force, and acceleration of different particles, we must keep track of not only the magnitude of these quantities but also the directions, so we can determine how these particles will interact with the other particles in the system.  We will use the vector helper functions in our physics calculations below.
 
 **Force and acceleration functions**
 
-```language(javascript)
+{% highlight js %}
 /////////////////////////////////
 /////PHYSICS EQUATIONS///////////
 /////////////////////////////////
@@ -86,12 +86,12 @@ function calcPosition(position, velocity) {
 function calcDistance(pos1, pos2) {
   return Math.sqrt(Math.pow(pos1[X]-pos2[X], 2) + Math.pow(pos1[Y]-pos2[Y], 2))
 }
-```
+{% endhighlight %}
 All the above equations will be used to calculate the new position of a particle based of its current position, velocity, and the force exerted on it by every other particle in the system.  With our main functions in place we can now think about making particles and putting our functions to work.
 
 **Particle generating functions being used in the current configuration**
 
-```language(javascript)
+{% highlight js %}
 //A function to create an object with all the properties for making a
 //circle in html. The arguments are initial position, initial velocity, 
 //initial acceleration, mass, charge, radius, whether they should be 
@@ -149,12 +149,12 @@ function injector() {
     genParticle([i*Math.random()*10, 400],[1,0.1], [0,0], 0, 1, 10, true, "#F54836");
   }
 }
-```
+{% endhighlight %}
 Above we have three main functions.  The first is a general function for making any type of charged particle we want.  The second and third functions are use case specific.  In our current implementation, we are simulating the magnetic confinement of charged particles.  This might be seen in a particle accelerator, or an experimental nuclear fusion reactor, where you have walls or tubes with an extremely strong charge, exerting a large repulsive force from all directions on a narrow beam of particles in the center of the tube.  As a result, the beam of particles is compressed,and often accelerated to tremendous speeds. With this in mind, we see how the makeAWall function can be used to recreate a basic version of one of these repulsive walls.  Our injector function, on the other hand, is what creates our particle beam.
 
 **Main System Logic/Loop**
 
-```language(javascript)
+{% highlight js %}
 //Use D3 to create our particles in the DOM. Make two positively charged 
 //walls above and below where the other particles will be injected. Invoke 
 //injector then run renderParticles helper function to render particles 
@@ -183,7 +183,7 @@ function systemLoop() {
     renderParticles();
   }, animSpeed);
 }
-```
+{% endhighlight %}
 Above is the heart of what makes the particle system run. We initialize our system by creating two positively charged walls, then inject 100 particles in the space between the walls.  The most crucial aspect of this part is what happens inside of the setInterval.  Every time the updateParticles (I've omitted the source for that for the sake of brevity) function gets invoked, every particle that is not static (meaning everything but the walls) has a force exerted on it by every other particle in the system (including the walls).  In the current implementation, we have 500 total particles.  That means for each of the 100 particles made by the injector, we must calculate the influence of the other 499 particles in the system.  That means for one iteration of our game loop we must perform roughly 50,000 operations.  Moreover, this game loop runs on an interval based off of the variable animSpeed, which in this implementation is 10 milliseconds.  That means that every second, this system is performing over 5,000,000 operations.
 
 That in itself is simply amazing.  And what is even more amazing is that it runs in the browser... on a laptop.  This is something that just a decade ago would have seemed unbelievable.  But the fact of the matter is that we can perform meaningful physical simulations with a browser and a software language made for web development.
