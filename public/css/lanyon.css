@@ -155,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 30rem) {
   .sidebar {
-    font-size: .75rem; /* 14px */
+    font-size: .75rem; 
   }
 }
 
@@ -187,7 +187,7 @@ a.sidebar-nav-item:focus {
   border-color: transparent;
 }*/
 
-@media (min-width: 48rem) {
+/*@media (min-width: 48rem) {
   .sidebar-item {
     padding: 1.5rem;
   }
@@ -195,7 +195,7 @@ a.sidebar-nav-item:focus {
     padding-left:  1.5rem;
     padding-right: 1.5rem;
   }
-}
+}*/
 
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
