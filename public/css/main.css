@@ -1,3 +1,96 @@
-.wrap {
-  margin-left: 10rem;
+/**********************
+*****   Masthead ******
+**********************/
+
+.masthead .container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+.masthead .container p {
+  width: 25vw;
+  font-size: .75rem;
+}
+
+/**********************
+******   Sidebar ******
+**********************/
+
+.sidebar {
+  width: 14rem;
+  background: linear-gradient(to bottom, #000000 35%, #F57979 80%);
+  font-weight: 300;
+}
+
+.mars {
+  margin-left: 5vw;
+  margin-top: -3vw;
+  margin-bottom: 10vh;
+}
+
+.icon-holder {
+  margin-top: 20vh;
+  margin-left: 2rem;
+}
+
+.icon-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-list li {
+  margin-right: 1rem;
+}
+
+.icon-list img:hover {
+  cursor: pointer;
+}
+
+.icon-list img {
+  height: 2rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
+  .wrap {
+    margin-left: 0;
+  }
+}
+
+a.sidebar-nav-item {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+a.sidebar-nav-item:hover {
+  color: #b3ebff;
+}
+
+
+/**********************
+****  Main Content ****
+**********************/
+
+.wrap {
+  margin-left: calc(14rem + 5vw);
+}
+
+.post-title {
+  font-size: 1.7rem;
+}
+
+.post-date {
+  font-size: .8rem;
+}
+
+.content {
+  margin-left: 2rem;
+}
+
