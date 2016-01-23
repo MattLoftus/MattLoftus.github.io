@@ -9,47 +9,49 @@
   </div>
 
   <nav class="sidebar-nav">
-    <div class="mars">
-      <script>
-        var width  = 150,
-            height = 150;
+    <a class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">
+      <div class="mars">
+        <script>
+          var width  = 150,
+              height = 150;
 
-        var scene = new THREE.Scene();
+          var scene = new THREE.Scene();
 
-        var camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 1000);
-        camera.position.z = 1.5;
+          var camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 1000);
+          camera.position.z = 1.5;
 
-        var renderer = new THREE.WebGLRenderer({antialias: true});
-        renderer.setSize(width, height);
-        $(".mars").append( renderer.domElement );
+          var renderer = new THREE.WebGLRenderer({antialias: true});
+          renderer.setSize(width, height);
+          $(".mars").append( renderer.domElement );
 
-        scene.add(new THREE.AmbientLight(0x333333));
+          scene.add(new THREE.AmbientLight(0x333333));
 
-        var light = new THREE.DirectionalLight(0xffffff, 1);
-        light.position.set(5,3,5);
-        scene.add(light);
+          var light = new THREE.DirectionalLight(0xffffff, 1);
+          light.position.set(5,3,5);
+          scene.add(light);
 
-        var geometry = new THREE.SphereGeometry(0.5, 32, 32);
-        var material = new THREE.MeshPhongMaterial({
-        map: THREE.ImageUtils.loadTexture("/images/marsmap1k.jpg"),
-        color: 0xaaaaaa,
-        ambient: 0xaaaaaa,
-        specular: 0x333333,
-        bumpScale: 0.2,
-        shininess: 10
-        });
-        var sphere = new THREE.Mesh( geometry, material);
-        scene.add(sphere);
+          var geometry = new THREE.SphereGeometry(0.5, 32, 32);
+          var material = new THREE.MeshPhongMaterial({
+          map: THREE.ImageUtils.loadTexture("/images/marsmap1k.jpg"),
+          color: 0xaaaaaa,
+          ambient: 0xaaaaaa,
+          specular: 0x333333,
+          bumpScale: 0.2,
+          shininess: 10
+          });
+          var sphere = new THREE.Mesh( geometry, material);
+          scene.add(sphere);
 
-        render();
-        function render() {
-          sphere.rotation.y += 0.0008;
-          requestAnimationFrame(render);
-          renderer.render(scene, camera);
-        }
-      </script>
+          render();
+          function render() {
+            sphere.rotation.y += 0.0008;
+            requestAnimationFrame(render);
+            renderer.render(scene, camera);
+          }
+        </script>
 
-    </div>
+      </div>
+    </a>
 
 
     <a class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">Posts</a>

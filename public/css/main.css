@@ -5,6 +5,7 @@
 .masthead .container {
   margin-left: 2rem;
   margin-right: 2rem;
+  padding-left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,6 +14,11 @@
 .masthead .container p {
   width: 25vw;
   font-size: .75rem;
+}
+
+.masthead .container a.small-head {
+  padding-top: 0;
+  display: none;
 }
 
 /**********************
@@ -25,14 +31,14 @@
   font-weight: 300;
 }
 
-.mars {
-  margin-left: 5vw;
-  margin-top: -3vw;
-  margin-bottom: 10vh;
+a .mars {
+  margin-left: 1vw;
+  margin-top: -2rem;
+  margin-bottom: 5vh;
 }
 
 .icon-holder {
-  margin-top: 20vh;
+  margin-top: 15vh;
   margin-left: 2rem;
 }
 
@@ -74,7 +80,7 @@ a.sidebar-nav-item:hover {
 }
 
 .post-title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .post-date {
@@ -82,15 +88,30 @@ a.sidebar-nav-item:hover {
 }
 
 .content {
-  margin-left: 2rem;
+  margin-left: 1.4rem;
+  font-size: .8rem;
 }
-/*
+
+@media only screen and (min-width: 500px) {
+  .container.content,
+  .masthead {
+    width: calc(100vw - 15rem);
+  }
+}
+
 @media only screen and (max-width: 1000px) {
+  .container p.quote {
+    font-size: .5rem;
+  }
+  .masthead .container {
+    padding-right: 0;
+  }
+}
 
-}*/
-
-.container .content {
-  width: calc(100vw - 15rem);
+@media only screen and (max-width: 720px) {
+  .container p.quote {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -99,6 +120,19 @@ a.sidebar-nav-item:hover {
   }
   .wrap {
     margin-left: 0;
+  }
+  .masthead .container a.small-head {
+    display: block;
+  }
+  .quote {
+    display: none;
+  }
+  .sidebar-toggle {
+    display: none;
+  }
+  div.container.content {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
