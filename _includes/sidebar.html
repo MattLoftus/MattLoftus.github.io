@@ -9,7 +9,50 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
+    <div class="mars">
+      <script>
+        var width  = 150,
+            height = 150;
+
+        var scene = new THREE.Scene();
+
+        var camera = new THREE.PerspectiveCamera(45, width / height, 0.01, 1000);
+        camera.position.z = 1.5;
+
+        var renderer = new THREE.WebGLRenderer({antialias: true});
+        renderer.setSize(width, height);
+        $(".mars").append( renderer.domElement );
+
+        scene.add(new THREE.AmbientLight(0x333333));
+
+        var light = new THREE.DirectionalLight(0xffffff, 1);
+        light.position.set(5,3,5);
+        scene.add(light);
+
+        var geometry = new THREE.SphereGeometry(0.5, 32, 32);
+        var material = new THREE.MeshPhongMaterial({
+        map: THREE.ImageUtils.loadTexture("/images/marsmap1k.jpg"),
+        color: 0xaaaaaa,
+        ambient: 0xaaaaaa,
+        specular: 0x333333,
+        bumpScale: 0.2,
+        shininess: 10
+        });
+        var sphere = new THREE.Mesh( geometry, material);
+        scene.add(sphere);
+
+        render();
+        function render() {
+          sphere.rotation.y += 0.0008;
+          requestAnimationFrame(render);
+          renderer.render(scene, camera);
+        }
+      </script>
+
+    </div>
+
+
+    <a class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">Posts</a>
 
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
@@ -25,14 +68,41 @@
       {% endif %}
     {% endfor %}
 
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+    <div class="icon-holder">
+      <ul class="icon-list">
+
+        <li>
+          <a href="https://github.com/MattLoftus">
+            <img src="/images/github-icon.svg">
+          </a>
+        </li>
+
+        </li>
+          <a href="https://linkedin.com/in/LoftusMatt">
+            <img src="/images/linkedin.svg">
+          </a>
+        </li>
+
+      </ul>
+
+      <ul class="icon-list">
+
+        <li>
+          <a href="https://twitter.com/MastaYu">
+            <img src="/images/twitter-black.png">
+          </a>
+        </li>
+
+        <li>
+          <a href="https://plus.google.com/u/0/102102600372077627915/posts">
+            <img src="/images/google-plus.svg">
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+    
   </nav>
 
-  <div class="sidebar-item">
-    <p>
-      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
-    </p>
-  </div>
 </div>

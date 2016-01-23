@@ -41,12 +41,12 @@ body {
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   color: #313131;
   letter-spacing: -.025rem;
 }
@@ -144,14 +144,14 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: -14rem;
+  left: 0rem;
   width: 14rem;
-  visibility: hidden;
+  /*visibility: hidden;*/
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
+  z-index: 1;
 }
 @media (min-width: 30rem) {
   .sidebar {
@@ -161,7 +161,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sidebar content */
 .sidebar a {
-  font-weight: normal;
   color: #fff;
 }
 .sidebar-item {
@@ -173,20 +172,20 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sidebar nav */
 .sidebar-nav {
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  /*border-bottom: 1px solid rgba(255,255,255,.1);*/
 }
 .sidebar-nav-item {
   display: block;
   padding: .5rem 1rem;
-  border-top: 1px solid rgba(255,255,255,.1);
+  /*border-top: 1px solid rgba(255,255,255,.1);*/
 }
-.sidebar-nav-item.active,
+/*.sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
   background-color: rgba(255,255,255,.1);
   border-color: transparent;
-}
+}*/
 
 @media (min-width: 48rem) {
   .sidebar-item {
@@ -230,11 +229,11 @@ a.sidebar-nav-item:focus {
           box-sizing: border-box;
 }
 
-.sidebar-toggle:active,
-#sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
+/*.sidebar-toggle:active ~
+.wrap .sidebar-toggle {
   color: #fff;
   background-color: #505050;
-}
+}*/
 
 @media (min-width: 30.1rem) {
   .sidebar-toggle {
@@ -260,7 +259,7 @@ a.sidebar-nav-item:focus {
  * `position: absolute;` when transformed.
  *
  * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
- */
+ 
 
 .wrap,
 .sidebar,
@@ -365,7 +364,6 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }
