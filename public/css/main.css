@@ -54,15 +54,6 @@
   height: 2rem;
 }
 
-@media only screen and (max-width: 500px) {
-  .sidebar {
-    display: none;
-  }
-  .wrap {
-    margin-left: 0;
-  }
-}
-
 a.sidebar-nav-item {
   font-size: 1rem;
   font-weight: 300;
@@ -79,7 +70,7 @@ a.sidebar-nav-item:hover {
 **********************/
 
 .wrap {
-  margin-left: calc(14rem + 5vw);
+  margin-left: calc(14rem + 1vw);
 }
 
 .post-title {
@@ -93,4 +84,22 @@ a.sidebar-nav-item:hover {
 .content {
   margin-left: 2rem;
 }
+/*
+@media only screen and (max-width: 1000px) {
+
+}*/
+
+.container .content {
+  width: calc(100vw - 15rem);
+}
+
+@media only screen and (max-width: 500px) {
+  .sidebar {
+    display: none;
+  }
+  .wrap {
+    margin-left: 0;
+  }
+}
+
 
