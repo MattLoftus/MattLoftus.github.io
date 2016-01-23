@@ -33,7 +33,7 @@
 
 a .mars {
   margin-left: 3rem;
-  margin-top: -2rem;
+  margin-top: -1rem;
   margin-bottom: 5vh;
 }
 
@@ -92,6 +92,10 @@ a.sidebar-nav-item:hover {
   font-size: .8rem;
 }
 
+img[alt=Architecture\ Diagram] {
+  width: 100%;
+}
+
 @media only screen and (min-width: 500px) {
   .container.content,
   .masthead {
@@ -120,6 +124,9 @@ a.sidebar-nav-item:hover {
 @media only screen and (max-width: 610px) {
   a .mars {
     margin-left: 1.5rem;
+  }
+  .icon-holder {
+    margin-top: 25vh;
   }
 }
 
