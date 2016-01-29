@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Modeling Magnetic Confinement with JavaScript and D3.js
+about: An introduction to particle systems and modeling physical pheomena using JavaScript
 ---
 
 Particle systems are an amazing way to visualize and model important natural phenomena. They give us an experience that provides a different kind of value than simply staring at equations and reading results in an excel document.   The value they give us is tangible, and from observing these systems visually, we can understand the subject at hand  in an intuitive way.

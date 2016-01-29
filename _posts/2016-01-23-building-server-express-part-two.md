@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building Servers with Node.js and Express, Part 2
+about: A detailed walkthrough of an Express server, covering architecture, routing, security, response handling, and database operations.
 ---
 
 In this post: Express, Express Router, MySQL

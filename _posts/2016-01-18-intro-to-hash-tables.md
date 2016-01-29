@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Intro To Hash Tables
+about: A walkthrough of a basic implementation of a hash table, its advantages, and hashing functions.
 ---
 
 A hash table is an incredibly useful data structure we use throughout our daily lives, whether we know it or not.  We use them to store relational data and quickly manipulate and interact with that data.  Before we delve into what they actually are, though, lets think about a potential use case.

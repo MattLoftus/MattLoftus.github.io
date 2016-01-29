@@ -96,6 +96,19 @@ img[alt=Architecture\ Diagram] {
   width: 100%;
 }
 
+img[alt=basic-sphere] {
+  width: 50%;
+  margin: auto;
+}
+
+img[alt=rh-coordinate-system] {
+  margin: auto;
+}
+
+/**********************
+****  Responsivity ****
+**********************/
+
 @media only screen and (min-width: 500px) {
   .container.content,
   .masthead {

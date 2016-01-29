@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building Servers with Node.js and Express, Part 1
+about: An introduction to using Express and the basic building blocks of a server.
 ---
 
 Being able to write servers in Node.js was an incredible step forward for web development, as it allowed us to have a truly seamless integration with the client and the server, and build full stack applications entirely in JavaScript.  Writing servers in vanilla Node is not bad, but when you compare it with building an express server, it almost feels archaic.  
