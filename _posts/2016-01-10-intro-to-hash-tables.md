@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Intro To Hash Tables
+title: Intro to Hash Tables
 about: A walkthrough of a basic implementation of a hash table, its advantages, and hashing functions.
 ---
 
