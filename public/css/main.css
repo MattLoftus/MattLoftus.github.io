@@ -96,7 +96,8 @@ img[alt=Architecture\ Diagram] {
   width: 100%;
 }
 
-img[alt=basic-sphere] {
+img[alt=basic-sphere],
+img[alt=basic-earth] {
   width: 50%;
   margin: auto;
 }
