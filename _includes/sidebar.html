@@ -10,9 +10,9 @@
 
   <nav class="sidebar-nav">
     <a href="/">
-      <div class="mars">
+      <div id="mars">
         <script>
-          var width  = 150,
+          (function(){var width  = 150,
               height = 150;
 
           var scene = new THREE.Scene();
@@ -22,8 +22,9 @@
 
           var renderer = new THREE.WebGLRenderer({antialias: true});
           renderer.setSize(width, height);
-          $(".mars").append( renderer.domElement );
+          document.getElementById("mars").appendChild( renderer.domElement );
 
+          var orbitControls = new THREE.OrbitControls(camera, renderer.domElement);
           scene.add(new THREE.AmbientLight(0x333333));
 
           var light = new THREE.DirectionalLight(0xffffff, 1);
@@ -48,6 +49,7 @@
             requestAnimationFrame(render);
             renderer.render(scene, camera);
           }
+        })();
         </script>
 
       </div>

@@ -31,7 +31,7 @@
   font-weight: 300;
 }
 
-a .mars {
+a #mars {
   margin-left: 3rem;
   margin-top: -1rem;
   margin-bottom: 5vh;
@@ -99,7 +99,8 @@ img[alt=Architecture\ Diagram] {
 }
 
 img[alt=basic-sphere],
-img[alt=basic-earth] {
+img[alt=basic-earth],
+img[alt=y-axis-rotation] {
   width: 50%;
   margin: auto;
 }
@@ -123,6 +124,13 @@ div.post {
   border-bottom: 1px solid #d0d0d0;
 }
 
+/**********************
+****  POST LIST *******
+**********************/
+
+#earth-rotation canvas {
+  margin-left: 2rem;
+}
 
 
 /**********************
@@ -156,7 +164,7 @@ div.post {
 }
 
 @media only screen and (max-width: 610px) {
-  a .mars {
+  a #mars {
     margin-left: 1.5rem;
   }
   .icon-holder {
