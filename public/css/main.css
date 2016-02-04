@@ -100,7 +100,8 @@ img[alt=Architecture\ Diagram] {
 
 img[alt=basic-sphere],
 img[alt=basic-earth],
-img[alt=y-axis-rotation] {
+img[alt=y-axis-rotation],
+img[alt=polar-coordinates] {
   width: 50%;
   margin: auto;
 }
@@ -128,10 +129,19 @@ div.post {
 ****  POST LIST *******
 **********************/
 
-#earth-rotation canvas {
+/*#earth-rotation canvas,
+#cloud-layer canvas,
+#earth-stars canvas, {
   margin-left: 2rem;
 }
-
+*/
+#earth-rotation,
+#cloud-layer,
+#earth-stars,
+#moon-orbit,
+#flyby {
+  margin-left: 2rem;
+}
 
 /**********************
 ****  Responsivity ****
