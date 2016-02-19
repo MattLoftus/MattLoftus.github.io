@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Making Your Node Processes Fault Tolerant with PM2
-about: A brief walkthrough of the process manager PM2 and a use case with a deployed Node server
+title: Making Your Node.js Processes Fault Tolerant with PM2
+about: A brief walkthrough of the process manager PM2 and a use case with a deployed Node.js server.
 ---
 
 TLDR... The 2 most useful commands:
