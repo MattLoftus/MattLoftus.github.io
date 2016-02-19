@@ -53,6 +53,6 @@ And you will see the following output:
 
 ![pm2-list](/images/pm2_list.png)
 
-You can see the server has had to restart 53 times, but PM2 has handled these restarts gracefully.  Another service called "forever" offers similar basic functionality, but from my experience PM2 is the better choice, both because it is extremely easy to get started with, and it offers load-balancing and advanced tasks right out of the box.  Hopefully you can use PM2 to make your own processes fault taulerant as well.
+You can see the server has had to restart 53 times, but PM2 has handled these restarts gracefully.  Another service called "forever" offers similar basic functionality, but from my experience PM2 is the better choice, both because it is extremely easy to get started with, and it offers load-balancing and advanced tasks right out of the box.  Hopefully you can use PM2 to make your own processes fault tolerant as well.
 
 
