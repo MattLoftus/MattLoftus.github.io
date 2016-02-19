@@ -110,6 +110,11 @@ img[alt=rh-coordinate-system] {
   margin: auto;
 }
 
+img[alt=pm2-list] {
+  width: 90%;
+  margin: auto;
+}
+
 /**********************
 ****  POST LIST *******
 **********************/

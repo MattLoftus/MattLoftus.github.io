@@ -9,7 +9,9 @@ Particle systems are an amazing way to visualize and model important natural phe
 Just below are a couple videos I added to YouTube showing the results of running a couple different variations of the code we'll get into in this post.  If you're not in the mood for a long article, I'd suggest just watching the videos to get an idea of what I mean by a particle system.
 
 [Magnetic Confinement Simulation](https://youtu.be/1fnK0qC0GBU)
+
 [Big Bang Simulation (medium speed)](https://youtu.be/uxJ7BiQ07PE)
+
 [Big Bang Simulation (slow motion)](https://youtu.be/wlInWXpTCAk)
 
 A **particle system** is a simulation in which elements under observation interact with each other and their surroundings according to explicitly defined physical laws.  Think of the planets revolving around the solar system, viruses interacting with and destroying healthy cells.
